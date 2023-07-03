@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<section class="create-ice-cream">
+			<h2>Create your ice-cream</h2>
+			<div class="ice-cream-container">
+                <section
+                class="options-container-with-arrows toppings-container-with-arrows"
+            >
+                <span class="arrow-span" id="toLeftTopping" onclick="scrollToLeft('toppingId', this.nextElementSibling)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <use xlink:href="images/left-arrow.svg#Layer_1"></use>
+                    </svg>
+                </span>
+
+                <div class="toppings-container options-container" id="toppings">
+                    
+                </div>
+                <span class="arrow-span" id="toRightTopping" onclick="scrollRight('toppingId', this.previousElementSibling)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <use xlink:href="images/right-arrow.svg#Layer_1"></use>
+                    </svg>
+                </span>
+            </section>
+
+				<section
+					class="options-container-with-arrows balls-container-with-arrows"
+                    id="ballsContainer1"
+                    data-ball-count="1"
+				>
+					<span class="arrow-span" id="toLeftBall" onclick="scrollToLeft('ballId'+this.parentNode.dataset.ballCount, this.nextElementSibling)">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use xlink:href="images/left-arrow.svg#Layer_1"></use>
+						</svg>
+					</span>
+
+					<div class="balls-container options-container" id="balls1">
+						<img
+							src="images/choco-white-ball.png"
+							alt="choco-white-ball"
+							class="ball"
+						/>
+					</div>
+					<span class="arrow-span" id="toRightBall" onclick="scrollRight('ballId'+this.parentNode.dataset.ballCount, this.previousElementSibling)">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use xlink:href="images/right-arrow.svg#Layer_1"></use>
+						</svg>
+					</span>
+				</section>
+
+				<section
+					class="options-container-with-arrows cons-container-with-arrows"
+				>
+					<span class="arrow-span" id="toLeftCone" onclick="scrollToLeft('coneId', this.nextElementSibling)">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use xlink:href="images/left-arrow.svg#Layer_1"></use>
+						</svg>
+					</span>
+					<div class="cons-container options-container" id="cones">
+						<img
+							src="images/regular-cone.png"
+							alt="regular-cone"
+							class="cone"
+						/>
+					</div>
+					<span class="arrow-span" id="toRightCone" onclick="scrollRight('coneId', this.previousElementSibling)">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<use xlink:href="images/right-arrow.svg#Layer_1"></use>
+						</svg>
+					</span>
+				</section>
+			</div>
+            <h3 id="totalPrice"></h3>
+			<div class="order">
+				
+                <button class="btn add-btn" id="addBallBtn">Add one more ball</button>
+				<button type="submit" class="btn buy-btn" id="buyBtn">Buy</button>
+			</div>
+		</section>
+
+        <script src="main.js"> </script>
+	</body>
+</html>
